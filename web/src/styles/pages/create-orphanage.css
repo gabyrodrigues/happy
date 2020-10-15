@@ -74,20 +74,39 @@ form.create-orphanage-form .input-block input {
 }
 
 form.create-orphanage-form .input-block textarea {
+  line-height: 28px;
   min-height: 120px;
   max-height: 240px;
-  resize: vertical;
   padding: 16px;
-  line-height: 28px;
+  resize: vertical;
 }
 
-form.create-orphanage-form .input-block .new-image {
+form.create-orphanage-form .input-block .images-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 16px;
+}
+
+form.create-orphanage-form .input-block .images-container img {
+  border-radius: 20px;
+  height: 96px;
+  object-fit: cover;
   width: 100%;
-  height: 64px;
+}
+
+form.create-orphanage-form .input-block .images-container .new-image {
+  align-items: center;
   background: #F5F8FA;
   border: 1px dashed #96D2F0;
   border-radius: 20px;
   cursor: pointer;
+  display: flex;
+  height: 96px;
+  justify-content: center;
+}
+
+form.create-orphanage-form .input-block input[type="file"] {
+  display: none;
 }
 
 form.create-orphanage-form .input-block .button-select {
@@ -96,11 +115,11 @@ form.create-orphanage-form .input-block .button-select {
 }
 
 form.create-orphanage-form .input-block .button-select button {
-  height: 64px;
   background: #F5F8FA;
   border: 1px solid #D3E2E5;
   color: #5C8599;
   cursor: pointer;
+  height: 64px;
 }
 
 form.create-orphanage-form .input-block .button-select button.active {
@@ -143,4 +162,10 @@ form.create-orphanage-form button.confirm-button svg {
 
 form.create-orphanage-form button.confirm-button:hover {
   background: #36CF82;
+}
+
+form.create-orphanage-form .leaflet-container {
+  border: 1px solid #d3e2e5;
+  border-radius: 20px;
+  margin-bottom: 40px;
 }
